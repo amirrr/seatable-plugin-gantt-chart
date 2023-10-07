@@ -1,0 +1,16 @@
+{
+  "name": "gantt_chart",
+  "version": "0.9.0",
+  "display_name": {
+    "de": "Gantt Chart",
+    "en": "Gantt Chart",
+    "fr": "Gantt Chart",
+    "zh-cn": "Gantt Chart"
+  },
+  "description": {
+    "de": "Gantt chart plugin for seatable",
+    "en": "Gantt chart plugin for seatable",
+    "fr": "Gantt chart plugin for seatable",
+    "zh-cn": "Gantt chart plugin for seatable"
+  }
+}
