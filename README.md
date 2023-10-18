@@ -6,13 +6,13 @@ The SeaTable Gantt Chart plugin allows you to enhance your SeaTable tables with 
 ## Plugin Directory Structure
 
 ```
-your-plugin
-├── main.js                 // Compiled JavaScript file
-├── info.json               // Plugin info file
-├── media                   // Plugin static files folder
-│   ├── main.css            // Compiled CSS file
-│   ├── icon.png            // Icon image of the plugin
-│   └── card_image.png      // Background image for the plugin icon
+gantt-chart-plugin
+├── app.js                          // Compiled JavaScript file
+├── setting.local.js                // Plugin api credentials
+├── components                      // Plugin components folder
+│   ├── ganttchart.js               // Main component of the plugin
+│   └── gantt-setting.js            // Plugin settings component
+
 ```
 
 The `info.json` file contains plugin metadata, including the name, version, display type, display name, description, and information about included files.
