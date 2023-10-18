@@ -3,12 +3,19 @@
   "version": "0.1.1",
   "private": true,
   "dependencies": {
+    "@seafile/seafile-calendar": "^0.0.24",
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.1",
     "dtable-sdk": "0.2.2",
+    "dtable-ui-component": "^0.3.20",
     "gantt-task-react": "^0.3.9",
+    "html2canvas": "^1.4.1",
     "react": "16.14.0",
     "react-app-polyfill": "^1.0.6",
+    "react-bootstrap": "^2.9.0",
     "react-dom": "16.14.0",
     "react-intl-universal": "^2.2.2",
+    "react-select": "^5.7.7",
     "reactstrap": "8.9.0"
   },
   "scripts": {

@@ -1,0 +1,142 @@
+.plugin-timeline-setting {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  box-shadow: 0px 2px 10px 3px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.plugin-timeline-setting .setting-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.plugin-timeline-setting .setting-header {
+  padding: 0 20px;
+}
+
+.plugin-timeline-setting .setting-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.plugin-timeline-setting .setting-header-title {
+  flex: 1;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.plugin-timeline-setting .btn-close {
+  margin-right: -4px;
+}
+
+.plugin-timeline-setting .setting-body {
+  padding: 14px 20px 50px;
+  overflow: auto;
+  flex: 1;
+}
+
+.plugin-timeline-setting .setting-item {
+  margin-bottom: 14px;
+}
+
+.plugin-timeline-setting .setting-item .title {
+  margin-bottom: 10px;
+}
+
+.plugin-timeline-setting .split-line {
+  width: 100%;
+  height: 1px;
+  margin-bottom: 14px;
+  background-color: #e2e2e2;
+}
+
+.plugin-timeline-setting .record-end-type {
+  display: flex;
+  height: 36px;
+  flex-direction: row;
+  background-color: #ffffff;
+  border: 1px solid hsl(0,0%,80%);
+  border-radius: 4px;
+}
+
+.plugin-timeline-setting .record-end-type-item {
+  flex: 1 1;
+  text-align: center;
+  line-height: 34px;
+  cursor: pointer;
+  position: relative;
+}
+
+.plugin-timeline-setting .record-end-type-item:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.plugin-timeline-setting .record-end-type-item:last-child {
+  border-radius: 0 4px 4px 0;
+}
+
+.plugin-timeline-setting .record-end-type-item.selected {
+  box-shadow: 0 0 0 1px #ff8000;
+  color: #ff8000;
+  background-color: #fff2e4;
+}
+
+.plugin-timeline-setting .btn-date-range {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid hsl(0,0%,80%);;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.plugin-timeline-setting .btn-date-range>span {
+  display: inline-block;
+  width: 100%;
+  height: 36px;
+}
+
+.plugin-timeline-setting .btn-date-range .ant-calendar-picker-input {
+  width: 100%;
+  height: 100%;
+  padding: 0 8px;
+  border: none;
+}
+
+.timeline-view-setting-selector__menu .header-icon,
+.plugin-timeline-setting .header-icon {
+  display: inline-block;
+  padding: 0 0.3125rem;
+  margin-left: -0.3125rem;
+}
+
+.timeline-view-setting-selector__menu .header-icon .dtable-font,
+.plugin-timeline-setting .header-icon .dtable-font {
+  font-size: 14px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.timeline-view-setting-selector__menu .timeline-view-setting-selector__option--is-selected .dtable-font {
+  color: #fff !important;
+}
+
+.plugin-timeline-setting .null-option-name,
+.timeline-view-setting-selector__menu .null-option-name {
+  color: rgba(0, 0, 0, .25) !important;
+}
+
+.timeline-view-setting-selector__menu .timeline-view-setting-selector__option--is-selected .null-option-name {
+  color: #fff !important;
+}

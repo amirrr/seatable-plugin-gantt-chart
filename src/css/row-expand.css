@@ -1,0 +1,55 @@
+.timeline-popover.popper-row-expand {
+  width: 240px;
+}
+
+.timeline-popover.popper-row-expand .popover-body {
+  padding: 0;
+}
+
+.timeline-row-expand {
+  max-height: 350px;
+  min-height: 124px;
+  padding: 0.75rem 1rem;
+  overflow-y: scroll;
+  color: #212529;
+}
+
+.timeline-row-expand .row-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+
+.timeline-row-expand .cell-item {
+  min-height: 28px;
+  margin-top: 7px;
+}
+
+.timeline-row-expand .cell-item:first-child {
+  padding-left: 0;
+}
+
+.timeline-row-expand .row-cell-empty {
+  height: 8px;
+  width: 20px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+.timeline-row-expand .cell-item .column-name {
+  margin-right: .25rem;
+  color: #999;
+  line-height: 1;
+}
+
+.timeline-row-expand .checkbox-formatter {
+  display: flex;
+}
+
+.timeline-row-expand  .link-item {
+  align-items: center !important;
+  padding: 0 8px !important;
+  text-align: center;
+  margin-bottom: 4px;
+}
