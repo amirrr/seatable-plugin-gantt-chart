@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import dayjs from "dayjs";
 import intl from "react-intl-universal";
 import DTable, { CELL_TYPE, FORMULA_RESULT_TYPE, sortDate } from "dtable-sdk";
-import Timeline from "./components/ganttchart";
+import Ganttchart from "./components/ganttchart";
 import View from "./model/view";
 import Group from "./model/group";
 import TimelineRow from "./model/timeline-row";
@@ -867,19 +867,19 @@ class App extends React.Component {
           <div className="timeline-views-tabs"></div>
 
           <div className="timeline-operators">
-            <span className="timeline-operator dtable-font dtable-icon-set-up btn-settings">
+            <span className="timeline-operator dtable-font">
               <i
                 className="bi bi-gear-fill"
                 onClick={this.onTimelineSettingToggle} // Add a click event to show/hide settings
               ></i>
             </span>
-            <span className="timeline-operator dtable-font dtable-icon-x">
+            <span className="timeline-operator dtable-font">
               <i className="bi bi-x-lg" onClick={this.onPluginToggle}></i>
             </span>
           </div>
         </div>
 
-        <Timeline
+        <Ganttchart
           ref={(ref) => (this.timeline = ref)}
           tables={tables}
           views={views}

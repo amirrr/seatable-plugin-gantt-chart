@@ -30,7 +30,7 @@ import "gantt-task-react/dist/index.css";
 
 const KEY_SELECTED_GRID_VIEWS = `${PLUGIN_NAME}-selectedGridViews`;
 
-class Timeline extends React.Component {
+class Ganttchart extends React.Component {
   constructor(props) {
     super(props);
     this.gridViews = this.getGridViews();
@@ -500,7 +500,7 @@ class Timeline extends React.Component {
   }
 }
 
-Timeline.propTypes = {
+Ganttchart.propTypes = {
   tableID: PropTypes.string,
   collaborators: PropTypes.array,
   formulaRows: PropTypes.object,
@@ -525,4 +525,4 @@ Timeline.propTypes = {
   onModifyRow: PropTypes.func,
 };
 
-export default Timeline;
+export default Ganttchart;
