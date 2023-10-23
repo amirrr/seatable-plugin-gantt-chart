@@ -149,7 +149,6 @@ class Ganttchart extends React.Component {
   };
 
   setupGantt = (dtable, selectedTable, selectedView, settings) => {
-    
     if (!settings) {
       settings = {
         table_name: "",
@@ -164,46 +163,42 @@ class Ganttchart extends React.Component {
     let subtables = dtable.getTables();
     let collaborators = dtable.getRelatedUsers();
 
-    const table = dtable.getTableByName(settings.table_name);
+    let table = dtable.getTableByName(settings.table_name);
 
-    const columnName = dtable.getColumnByName(
-      table,
-      settings.label_column_name
-    )
-      ? dtable.getColumnByName(table, settings.label_column_name).key
-      : "";
+    if (!table) {
+      table = dtable.getActiveTable();
+    }
 
-    const columnFinish = dtable.getColumnByName(
-      table,
-      settings.end_time_column_name
-    )
-      ? dtable.getColumnByName(table, settings.end_time_column_name).key
-      : "";
+    const columnNameInfo = settings.label_column_name
+      ? dtable.getColumnByName(table, settings.label_column_name)
+      : null;
 
-    const columnStart = dtable.getColumnByName(
-      table,
-      settings.start_time_column_name
-    )
-      ? dtable.getColumnByName(table, settings.start_time_column_name).key
-      : "";
+    const columnFinishInfo = settings.end_time_column_name
+      ? dtable.getColumnByName(table, settings.end_time_column_name)
+      : null;
 
-    const columnLink = dtable.getColumnByName(
-      table,
-      settings.link_cell_column_name
-    )
-      ? dtable.getColumnByName(table, settings.link_cell_column_name).key
-      : "";
+    const columnStartInfo = settings.start_time_column_name
+      ? dtable.getColumnByName(table, settings.start_time_column_name)
+      : null;
+
+    const columnLinkInfo = settings.link_cell_column_name
+      ? dtable.getColumnByName(table, settings.link_cell_column_name)
+      : null;
+
+    const columnName = columnNameInfo ? columnNameInfo.key : "";
+    const columnFinish = columnFinishInfo ? columnFinishInfo.key : "";
+    const columnStart = columnStartInfo ? columnStartInfo.key : "";
+    const columnLink = columnLinkInfo ? columnLinkInfo.key : "";
 
     const view = dtable.getViewByName(table, selectedView);
     const rows = dtable.getViewRows(view, table);
     const findLinkRows = rows.slice(0, 5);
     const links = dtable.getTableLinkRows(findLinkRows, table);
 
-    
     const tasks = rows.map((row, index) => {
       const startDate = columnStart ? new Date(row[columnStart]) : new Date();
       const endDate = columnFinish ? new Date(row[columnFinish]) : new Date();
-    
+
       if (!columnName || !columnFinish || !columnStart) {
         // If any of the specified variables is empty, return an empty object
         return {
@@ -213,11 +208,11 @@ class Ganttchart extends React.Component {
           id: index,
           progress: 0,
           dependencies: [],
-          type: 'task',
-          project: ''
+          type: "task",
+          project: "",
         };
       }
-    
+
       return {
         start: startDate,
         end: endDate,
@@ -225,11 +220,11 @@ class Ganttchart extends React.Component {
         id: row._id,
         progress: 0,
         dependencies: columnLink ? links[row._id][columnLink] : [],
-        type: 'task',
-        project: 'ProjectSample'
+        type: "task",
+        project: "ProjectSample",
       };
     });
-    
+
     return tasks;
   };
 

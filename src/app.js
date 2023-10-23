@@ -905,7 +905,6 @@ class App extends React.Component {
             this.onModifyRow(selectedTable, row, update)
           }
         />
-        {console.log(rows)}
       </div>
     );
   }
