@@ -225,6 +225,21 @@ class Ganttchart extends React.Component {
       };
     });
 
+    // Create a new milestone task
+    // const milestoneTask = {
+    //   start: new Date(),
+    //   end: new Date(),
+    //   name: "Milestone",
+    //   id: "milestone-1", // You can use any unique identifier for the milestone
+    //   progress: 0,
+    //   dependencies: [], // Milestones typically have no dependencies
+    //   type: "milestone",
+    //   project: "ProjectSample",
+    // };
+
+    // // Add the milestone task to the end of the tasks array
+    // tasks.push(milestoneTask);
+
     return tasks;
   };
 
